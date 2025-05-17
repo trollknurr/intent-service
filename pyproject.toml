@@ -1,0 +1,20 @@
+[project]
+name = "ultimate-ml-engineer-challenge-2025"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11,<3.12"
+dependencies = [
+    "einops>=0.8.1",
+    "fastapi[standard]>=0.115.12",
+    "scikit-learn>=1.6.1",
+    "torch>=2.7.0",
+    "transformers>=4.51.3",
+]
+
+[dependency-groups]
+dev = [
+    "ipywidgets>=8.1.7",
+    "jupyterlab>=4.4.2",
+    "pandas>=2.2.3",
+]
