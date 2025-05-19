@@ -16,3 +16,15 @@ lint:
 
 test:
 	pytest tests
+
+#
+# Docker
+#
+
+.PHONY: build
+build:
+	docker build -t intent-service:dev .
+
+.PHONY: run
+run:
+	docker run -p 8000:8000 intent-service:dev
