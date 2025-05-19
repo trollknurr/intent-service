@@ -5,7 +5,10 @@ from intent_service.port.output.intent_model import IntentModel
 
 class IntentService(Intent):
     def __init__(self, intent_model: IntentModel) -> None:
-        self._intent_model = intent_model
+        self.intent_model = intent_model
 
     def get_intent(self, text: str) -> list[IntentPrediction]:
-        return self._intent_model.infer(text)
+        return self.intent_model.infer(text)
+
+    def is_model_ready(self) -> bool:
+        return self.intent_model.is_ready()

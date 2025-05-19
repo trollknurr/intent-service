@@ -9,3 +9,5 @@ wheels/
 # Virtual environments
 .venv
 weights/
+.ruff_cache/
+.pytest_cache/
