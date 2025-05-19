@@ -1,12 +1,27 @@
 # Intent Classification Service
 
-## Bootstrap local dev process
+## Bootstrap 
+
+### Local dev process
 
 * You will need [huggingface-cli](https://huggingface.co/docs/huggingface_hub/en/guides/cli) to get model weights for local development (no need for docker) and [UV](https://github.com/astral-sh/uv) for dependency management
 * `uv sync --locked`
 * Download embedder weights (will take time) `uv run huggingface-cli download jinaai/jina-embeddings-v3 --local-dir weights/jina-emb`
 
 Run dev server: `make dev`
+
+### Docker
+
+* Build image: `make build`
+* Run container: `make run`
+
+### Code quality
+
+* `make format` - format code with ruff
+* `make lint` - lint code with ruff
+* `make test` - run tests with pytest
+
+TODO: add static type checking with mypy/pyright
 
 ## Research and Experiments
 
