@@ -1,0 +1,3 @@
+weights/jina-emb/**/*
+.venv/
+.git/

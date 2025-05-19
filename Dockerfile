@@ -32,6 +32,7 @@ RUN --mount=type=cache,target=/home/appuser/.cache/uv,uid=${UID} \
 ADD --chown=${USER}:${USER} . /app
 
 RUN --mount=type=cache,target=/home/appuser/.cache/uv,uid=${UID} \
-    uv sync --locked
+    uv sync --locked && \
+    uv run huggingface-cli download jinaai/jina-embeddings-v3 --local-dir weights/jina-emb
 
 CMD ["uv", "run", "fastapi", "run", "src/intent_service/__main__.py"]

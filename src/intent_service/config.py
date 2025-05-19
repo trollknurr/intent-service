@@ -3,9 +3,9 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class ModelConfig(BaseSettings):
-    EMBEDDING_MODEL: str = Field(default="jinaai/jina-embeddings-v3")
+    EMBEDDING_MODEL: str = Field(default="./weights/jina-emb")
     EMBEDDING_DEVICE: str = Field(default="cpu")
-    LR_PATH: str = Field(default="weights/lr_jina_model.pkl")
+    LR_PATH: str = Field(default="./weights/lr_jina_model.pkl")
 
 
 class Config(BaseSettings):

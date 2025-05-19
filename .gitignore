@@ -6,8 +6,8 @@ dist/
 wheels/
 *.egg-info
 
-# Virtual environments
 .venv
-weights/
 .ruff_cache/
 .pytest_cache/
+
+weights/jina-emb
